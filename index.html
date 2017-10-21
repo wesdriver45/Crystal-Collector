@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Crystal Collector Game</title>
+
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<!-- Latest compiled and minified CSS -->
@@ -11,38 +12,52 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
 </head>
-<body>
-		
-	<header><h1>Crystal Collector!</h1></header>
+<body class="bg">
 
-	<div id="container">
-		<div class="instructions">
-			<p>You will be given a random number at the start of the game.</p>
-			<p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
-			<p>The value of each crystal is hidden from you until you click on it.</p>
-			<p>Each time when the game starts over, the game will change the values of each crystal.</p>
-		</<div>
+	<div class="wrapper">
 			
+		<header><h1>Crystal Collector!</h1></header>
+
+		<div id="container">
+			<div class="instructions">
+				<p>You will be given a random number at the start of the game.</p>
+				<p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+				<p>The value of each crystal is hidden from you until you click on it.</p>
+				<p>Each time when the game starts over, the game will change the values of each crystal.</p>
+			</<div>
+				
+			</div>
 		</div>
-	</div>
+		
+		<div class="row">
+			<div class="holder">
+				<div id="random"></div>
+			</div>
 
-	<div class="holder">
-		<div id="random"></div>
-	</div>
+			<div class="scores">
+				<h2>
+				Wins: 
+				<span id="wins"></span>
+				<br>
+				Losses: 
+				<span id="losses"></sapn>
+			</div>
+		</div>
 
-	<div class="scores">
-		<div id="wins">Wins: </div>
-		<div id="losses">Losses: </div>
+		<div class="row">
+			<div class="gems">
+				<img src="assets/images/green.png" class="click" id="gemOne">
+				<img src="assets/images/purple.png" class="click" id="gemTwo">
+				<img src="assets/images/red.png" class="click" id="gemThree">
+				<img src="assets/images/yellow.png" calss="click" id="gemFour">
+			</div>
+		</div>
+
+		<div id="yourScore">Your total Score: </div>
+
+		<div id="gemTotal"></div>
 
 	</div>
-	<div class="crystals">
-		<!-- <img src="assets/images" class="click" id="gemOne">
-		<img src="assets images" class="click" id="gemTwo">
-		<img src="assets/images" class="click" id="gemThree">
-		<img src="assets/images" calss="click" id="gemFour"> -->
-	</div>
-	<div id="yourScore">Your total Score: </div>
-	<div id="gemTotal"></div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	

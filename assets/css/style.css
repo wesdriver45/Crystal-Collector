@@ -1,24 +1,119 @@
+
+	* {
+	box-sizing: border-box;
+}
+
+.wrapper {
+	width: 100%
+}
+
+	body, html {
+	height: 100%;
+	margin: 0 auto;
+	clear: both;
+	}
+
+	header {
+	background-color: #cd853f;
+	color: #f5fffa;
+	height: 100px;
+	padding-top: 15px;
+	margin-right: 75%;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	margin-left: 20px;
+
+}
+
+
+
+
+
+
+
 /*classes*/
+
+.bg {
+	background-image: url("../../assets/images/background.jpg");
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
 .holder {
 	float: left;
-	text-align: center;
+	text-align: left;
+	font-size: 40px;
 	width: 15%;
-	height:150px;
-	background-color: #3cb371
-	
+	height: 150px;
+	background-color: #3cb371;
+	margin-right: 20px;
+	margin-left: 35px;
+}
+
+.instructions {
+	color: #008000;
+	font-size: 17px;
 }
 
 .scores {
+	float: left;
+	text-align: left;
+	font-size: 25px;
+	width: 15%;
+	height: 150px;
+	background-color: #00ffff;
 	
 }
 
+
+
+.click {
+	width: 100px;
+}
+
+.gems {
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+
 /*ids*/
+#gemFour {
+	width: 75px;
+}
+
 #container {
 	background-color: #ffdead;
+	margin-right: 65%;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	height: 275px;
+	padding-left: 10px;
+	padding-top: 25px;
 
 }
 
-header {
-	background-color: #cd853f;
+#yourScore {
+	background-color: #ffa500;
+	color: #f5fffa;
+	height: 30px;
+	width: 150px;
+	padding: 5px;
+	margin-bottom: 5px;
+	margin-left: 20px;
 }
+
+#gemTotal {
+	background-color: #ffa500;
+	color: #f5fffa;
+	font-size: 40px;
+	width: 15%;
+	height: 150px;
+	margin-left: 20px;
+
+}
+
 
