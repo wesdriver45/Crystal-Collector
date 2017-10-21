@@ -2,10 +2,10 @@
 var random = 0;
 var wins = 0;
 var losses = 0;
-var gemOne = "";
-var gemTwo = ""
-var gemThree = "";
-var gemFour = "";
+var gemOne = Math.floor((Math.random() * 12) + 1);
+var gemTwo = Math.floor((Math.random() * 12) + 1);
+var gemThree = Math.floor((Math.random() * 12) + 1);
+var gemFour = Math.floor((Math.random() * 12) + 1);
 var gemTotal = 0;
 
 
@@ -13,17 +13,12 @@ var gemTotal = 0;
 $(document).ready(function() {
 	
 	//chooses a random number to reach b/t 19-120
-	random = Math.floor((Math.random() * 119) +1);
+	random = Math.floor(Math.random() * (120 - 19)) + 19;
 	$("#random").text(random);
 
-	//determines a value for each gem b/t 1-12
-	gemOne = Math.floor((Math.random() *11) + 1);
-	gemTwo = Math.floor((Math.random() *11) + 1);
-	gemThree = Math.floor((Math.random() *11) + 1);
-	gemFour = Math.floor((Math.random() *11) + 1);
-
-	$("#wins").text(wins);
-	$("#losses").text(losses);
+	
+	
+	
 	
 	//click functions for gems
 	$("#gemOne").on("click", function() {
@@ -32,8 +27,12 @@ $(document).ready(function() {
 
 			if (gemTotal === random) {
 				wins ++;
+				$("#wins").text(wins);
+				reset();
 			} else if (gemTotal > random) {
 				losses++;
+				$("#losses").text(losses);
+				reset();
 			}
 	});
 
@@ -43,8 +42,12 @@ $(document).ready(function() {
 
 			if (gemTotal === random) {
 				wins ++;
+				$("#wins").text(wins);
+				reset();
 			} else if (gemTotal > random) {
 				losses++;
+				$("#losses").text(losses);
+				reset();
 			}
 	});
 
@@ -54,8 +57,12 @@ $(document).ready(function() {
 
 			if (gemTotal === random) {
 				wins ++;
+				$("#wins").text(wins);
+				reset();
 			} else if (gemTotal > random) {
 				losses++;
+				$("#losses").text(losses);
+				reset();
 			}
 	});
 
@@ -65,10 +72,27 @@ $(document).ready(function() {
 
 			if (gemTotal === random) {
 				wins ++;
+				$("#wins").text(wins);
+				reset();
 			} else if (gemTotal > random) {
 				losses++;
+				$("#losses").text(losses);
+				reset();
 			}
 	});
+
+	function reset() {
+		gemTotal = 0;
+		$("#gemTotal").text(gemTotal);
+
+		random = Math.floor(Math.random() * (120 - 19)) + 19;
+		$("#random").text(random);
+
+		gemOne = Math.floor((Math.random() * 12) + 1);
+		gemTwo = Math.floor((Math.random() * 12) + 1);
+		gemThree = Math.floor((Math.random() * 12) + 1);
+		gemFour = Math.floor((Math.random() * 12) + 1);
+	}
 
 
 
